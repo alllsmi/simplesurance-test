@@ -29,7 +29,7 @@ configurations {
 }
 
 task cucumber(){
-    dependsOn assemble, compileTestJava
+    dependsOn assemble, compileTestJava, test
     doLast {
         javaexec {
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
